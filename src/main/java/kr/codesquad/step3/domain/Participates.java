@@ -14,8 +14,12 @@ public class Participates {
         this.participatesNames = participates;
     }
 
-    public static Participates createParticipates(String participateNames){
+    public static Participates makeParticipates(String participateNames){
         List<String> eachParticipateName = makeEachParticipateNameGroup(participateNames);
+        return createParticipates(eachParticipateName);
+    }
+
+    private static Participates createParticipates(List<String> eachParticipateName){
         List<Participate> participates = eachParticipateName.stream()
                 .map(Participate::new)
                 .collect(Collectors.toList());

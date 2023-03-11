@@ -9,7 +9,7 @@ import kr.codesquad.step3.view.OutputView;
 public class LadderGame {
     public void run(){
         String participateNames = InputView.inputParticipateNames();
-        Participates participates =Participates.createParticipates(participateNames);
+        Participates participates =Participates.makeParticipates(participateNames);
         int height = InputView.inputHeight();
         Ladder ladder = new Ladder(participates,height);
 
